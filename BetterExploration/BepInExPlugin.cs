@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using BepInEx;
+﻿using BepInEx;
 using BepInEx.Configuration;
 using HarmonyLib;
 using UnityEngine;
@@ -7,6 +6,8 @@ using UnityEngine;
 namespace Slothsoft.BetterExploration {
     [BepInPlugin("Slothsoft.BetterExploration", "Better Exploration", "0.0.1")]
     public partial class BepInExPlugin : BaseUnityPlugin {
+        static Harmony harmony = new Harmony(typeof(BepInExPlugin).Namespace);
+
         static ConfigEntry<bool> modEnabled;
 
         void Awake() {
@@ -18,18 +19,29 @@ namespace Slothsoft.BetterExploration {
                 return;
             }
 
-            Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), null);
+            harmony.PatchAll();
         }
 
         [HarmonyPatch(typeof(Character), nameof(Character.Jump))]
         static class CharacterJumpPatch {
-            static void Prefix(ref float jumpForce) {
+            static void Prefix(Character __instance) {
                 if (!modEnabled.Value) {
                     return;
                 }
-
-                jumpForce *= 2;
-                Debug.Log($"Increased jumpForce to '{jumpForce}'!");
+                __instance.SetMaxHealth(1000);
+                __instance.SetHealth(1000);
+                __instance.m_jumpForce = 10;
+                __instance.m_jumpForceForward = 10;
+                __instance.m_jumpStaminaUsage = 0;
+            }
+        }
+        [HarmonyPatch(typeof(Character), nameof(Character.IsOnGround))]
+        static class CharacterIsOnGroundPatch {
+            static void Postfix(ref bool __result) {
+                if (!modEnabled.Value) {
+                    return;
+                }
+                __result = true;
             }
         }
     }
