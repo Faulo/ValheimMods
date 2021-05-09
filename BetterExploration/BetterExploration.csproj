@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="BepInExPlugin.cs" />
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Layers.cs" />
+    <Compile Include="MinimapExploration.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\valheim.targets" />
