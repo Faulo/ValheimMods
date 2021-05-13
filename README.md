@@ -35,3 +35,28 @@ Slothsoft's Valheim Mods
 - Layer #29 is called ''
 - Layer #30 is called ''
 - Layer #31 is called 'smoke'
+
+## Environments
+- Environment 'Clear' has fog densities 0.01, 0.003, 0.01, 0.01
+- Environment 'Twilight_Clear' has fog densities 0.03, 0.01, 0.01, 0.02
+- Environment 'Misty' has fog densities 0.1, 0.02, 0.1, 0.15
+- Environment 'Darklands_dark' has fog densities 0.03, 0.03, 0.03, 0.03
+- Environment 'Heath clear' has fog densities 0.03, 0.006, 0.01, 0.02
+- Environment 'DeepForest Mist' has fog densities 0.02, 0.01, 0.02, 0.02
+- Environment 'GDKing' has fog densities 0.02, 0.01, 0.02, 0.02
+- Environment 'Rain' has fog densities 0.03, 0.03, 0.03, 0.03
+- Environment 'LightRain' has fog densities 0.03, 0.03, 0.03, 0.03
+- Environment 'ThunderStorm' has fog densities 0.03, 0.03, 0.03, 0.03
+- Environment 'Eikthyr' has fog densities 0.05, 0.05, 0.05, 0.05
+- Environment 'GoblinKing' has fog densities 0.05, 0.05, 0.05, 0.05
+- Environment 'nofogts' has fog densities 0.005, 0.005, 0.005, 0.005
+- Environment 'SwampRain' has fog densities 0.02, 0.02, 0.02, 0.02
+- Environment 'Bonemass' has fog densities 0.02, 0.02, 0.02, 0.02
+- Environment 'Snow' has fog densities 0.004, 0.004, 0.004, 0.004
+- Environment 'Twilight_Snow' has fog densities 0.03, 0.01, 0.01, 0.01
+- Environment 'Twilight_SnowStorm' has fog densities 0.05, 0.05, 0.05, 0.05
+- Environment 'SnowStorm' has fog densities 0.05, 0.05, 0.05, 0.05
+- Environment 'Moder' has fog densities 0.003, 0.003, 0.003, 0.003
+- Environment 'Ashrain' has fog densities 0.02, 0.02, 0.02, 0.02
+- Environment 'Crypt' has fog densities 0.1, 0.1, 0.1, 0.1
+- Environment 'SunkenCrypt' has fog densities 0.2, 0.2, 0.2, 0.2
