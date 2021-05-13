@@ -1,4 +1,7 @@
-﻿namespace Slothsoft.BetterExploration {
+﻿using System;
+
+namespace Slothsoft.BetterExploration {
+    [Flags]
     enum Layers {
         Default = 1 << 0,
         TransparentFX = 1 << 1,
