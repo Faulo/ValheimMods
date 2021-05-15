@@ -41,17 +41,13 @@ namespace Slothsoft.BetterExploration {
             }
         }
         void Update() {
-            if (Minimap.instance) {
+            if (Player.m_localPlayer && GameCamera.instance && Minimap.instance) {
                 attachedMinimap = Minimap.instance;
                 UpdateViewDistance();
                 if (usePlayerEyes) {
-                    if (Player.m_localPlayer) {
-                        Explore(Player.m_localPlayer.GetEyePoint(), Player.m_localPlayer.GetLookDir());
-                    }
+                    Explore(Player.m_localPlayer.GetEyePoint(), Player.m_localPlayer.GetLookDir());
                 } else {
-                    if (GameCamera.instance) {
-                        Explore(GameCamera.instance.transform.position, GameCamera.instance.transform.forward);
-                    }
+                    Explore(GameCamera.instance.transform.position, GameCamera.instance.transform.forward);
                 }
             }
         }
